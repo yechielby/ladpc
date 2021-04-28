@@ -1,0 +1,36 @@
+<mat-card>
+  <mat-card-content>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <h2>יצירת חשבון</h2>
+      <mat-form-field  appearance="outline" class="full-width-input">
+        <mat-label>שם מלא</mat-label>
+        <input matInput placeholder="שם מלא" formControlName="fullName" autocomplete="off" required>
+        <mat-error *ngIf="form.controls['fullName'].errors?.required" align="end">שדה חובה.</mat-error>
+        <mat-icon matSuffix>badge</mat-icon>
+      </mat-form-field>
+      <mat-form-field  appearance="outline" class="full-width-input">
+        <mat-label>דוא''ל</mat-label>
+        <input matInput placeholder="דוא''ל" formControlName="username" autocomplete="off" required>
+        <mat-error *ngIf="form.controls['username'].errors?.required" align="end">שדה חובה.</mat-error>
+        <mat-error *ngIf="form.controls['username'].errors?.email" align="end">אימייל זה לא תיקני.</mat-error>
+        <mat-icon matSuffix>lock</mat-icon>
+      </mat-form-field>
+      <mat-form-field  appearance="outline" class="full-width-input">
+        <mat-label>סיסמה</mat-label>
+        <input matInput [type]="hide?'password':'text'" placeholder="סיסמה" formControlName="password" autocomplete="off" required>
+        <mat-error *ngIf="form.controls['password'].errors?.required" align="end">שדה חובה.</mat-error>
+        <mat-error *ngIf="form.controls['password'].errors?.minlength" align="end">{{form.controls['password'].value.length}}/8</mat-error>
+        <mat-icon matSuffix (click)="hide = !hide">{{hide?'visibility_off':'visibility'}}</mat-icon>
+      </mat-form-field>
+      <button mat-raised-button [disabled]="form.invalid" color="primary">יצירת חשבון</button>
+    </form>
+
+    <br>
+    <br>
+
+    <div class="redirectToLogin">
+      <span>יש לך כבר חשבון? <a class="redirect" routerLink="/sign-in">כניסה לחשבון קיים</a>.</span>
+    </div>
+
+  </mat-card-content>
+</mat-card>

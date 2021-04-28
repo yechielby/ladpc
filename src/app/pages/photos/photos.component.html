@@ -1,0 +1,23 @@
+<div class="container">
+  <h1>אלבום התמונות שלנו</h1>
+  <div class="search">
+    <mat-form-field class="center-form-field">
+      <mat-label>חפש תמונה</mat-label>
+      <input matInput type="search" [(ngModel)]="value" autocomplete="off">
+      <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+        <mat-icon>close</mat-icon>
+      </button>
+      <mat-hint>סנן ע"פ הטקסט</mat-hint>
+    </mat-form-field>
+  </div>
+  <app-spinner *ngIf="photos?.length===0"></app-spinner>
+  <div class="photo-list" *ngIf="photos?.length>0" >
+      <div class="photo-item" *ngFor="let p of photos | filter : ['title'] : value">
+        <img [src]="p.thumbnailUrl" class="image" title="{{p.title}}">
+      </div>
+  </div>
+
+  <button id="myBtn" (click)="top()" mat-fab color="warn">
+    <mat-icon>expand_less</mat-icon>
+  </button>
+</div>

@@ -1,0 +1,179 @@
+<div class="container-fluid title">
+  <h1>בקשה לקבלת הנחה מתשלום ארנונה</h1>
+  <h2>הנחה על פי מבחן הכנסה</h2>
+</div>
+
+<div class="row stepper">
+  <div class="container">
+    <mat-horizontal-stepper #stepper class="stepper_boy">
+      <mat-step [stepControl]="firstFormGroup">
+        <form [formGroup]="firstFormGroup">
+          <ng-template matStepLabel>פרטי הבקשה</ng-template>
+          <div>
+            <h2>פרטי הבקשה</h2>
+            <h3>מלאו במדיוק את פרטי הנכס שעבורו מבוקשת הנחה</h3>
+          </div>
+          <div class="row fields">
+            <div class="col-md-6 col-xs-12">
+              <label >דוא"ל</label>
+              <mat-form-field appearance="outline">
+                <input matInput formControlName="firstCtrl" required>
+              </mat-form-field>
+            </div>
+            <div class="col-md-6 col-xs-12">
+              <label >מספר משלם</label>
+              <mat-form-field appearance="outline">
+                <input matInput formControlName="firstCtrl" required>
+              </mat-form-field>
+            </div>
+            <div class="col-md-6 col-xs-12">
+              <label >מספר נכס</label>
+              <mat-form-field  appearance="outline">
+                <input matInput formControlName="firstCtrl" required>
+              </mat-form-field>
+            </div>
+            <div class="col-md-6 col-xs-12">
+              <label >טלפון נייד</label>
+              <mat-form-field appearance="outline">
+                <input matInput formControlName="firstCtrl" required>
+              </mat-form-field>
+            </div>
+            <div class="col-md-6 col-xs-12">
+              <label >מסלקה</label>
+              <mat-form-field appearance="outline">
+                <input matInput formControlName="firstCtrl" required>
+              </mat-form-field>
+            </div>
+            <div class="col-md-6 col-xs-12">
+              <label>סוג בקשה</label>
+              <mat-form-field appearance="outline">
+                <input matInput formControlName="firstCtrl" required>
+              </mat-form-field>
+            </div>
+          </div>
+          <div>
+            <button mat-raised-button color="primary" matStepperNext>המשך</button>
+          </div>
+          <div class="line"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        </form>
+      </mat-step>
+      <mat-step [stepControl]="exampleFormGroup" label="השלמת פרטים">
+        <form [formGroup]="exampleFormGroup">
+          <div>
+            <h2>השלמת פרטים</h2>
+            <h3>מלאו במדיוק את פרטי הנכס שעבורו מבוקשת הנחה</h3>
+          </div>
+          <div class="row fields">
+            <div class="col-md-6 col-xs-12">
+              <label>שדה טקסט שני</label>
+              <mat-form-field appearance="outline">
+                <input matInput formControlName="example1Ctrl" required>
+              </mat-form-field>
+            </div>
+            <div class="col-md-6 col-xs-12">
+              <label>שדה טקסט ראשון</label>
+              <mat-form-field appearance="outline">
+                <input matInput formControlName="example2Ctrl" required>
+              </mat-form-field>
+            </div>
+          </div>
+          <div>
+            <button mat-raised-button color="primary" class="back" matStepperPrevious>חזרה</button>
+            <button mat-raised-button color="primary" matStepperNext>המשך</button>
+          </div>
+          <div class="line"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        </form>
+      </mat-step>
+      <mat-step [stepControl]="exampleFormGroup" label="עדכון פרטים">
+        <form [formGroup]="exampleFormGroup">
+          <div>
+            <h2>עדכון פרטים</h2>
+            <h3>מלאו במדיוק את פרטי הנכס שעבורו מבוקשת הנחה</h3>
+          </div>
+          <div class="row fields">
+            <div class="col-md-6 col-xs-12">
+              <label>שדה טקסט שני</label>
+              <mat-form-field appearance="outline">
+                <input matInput formControlName="example1Ctrl" required>
+              </mat-form-field>
+            </div>
+            <div class="col-md-6 col-xs-12">
+              <label>שדה טקסט ראשון</label>
+              <mat-form-field appearance="outline">
+                <input matInput formControlName="example2Ctrl" required>
+              </mat-form-field>
+            </div>
+          </div>
+          <div>
+            <button mat-raised-button color="primary" class="back" matStepperPrevious>חזרה</button>
+            <button mat-raised-button color="primary" matStepperNext>המשך</button>
+          </div>
+          <div class="line"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        </form>
+      </mat-step>
+      <mat-step [stepControl]="exampleFormGroup" label="מקורות הכנסה">
+        <form [formGroup]="exampleFormGroup">
+          <div>
+            <h2>מקורות הכנסה</h2>
+            <h3>מלאו במדיוק את פרטי הנכס שעבורו מבוקשת הנחה</h3>
+          </div>
+          <div class="row fields">
+            <div class="col-md-6 col-xs-12">
+              <label>שדה טקסט שני</label>
+              <mat-form-field appearance="outline">
+                <input matInput formControlName="example1Ctrl" required>
+              </mat-form-field>
+            </div>
+            <div class="col-md-6 col-xs-12">
+              <label>שדה טקסט ראשון</label>
+              <mat-form-field appearance="outline">
+                <input matInput formControlName="example2Ctrl" required>
+              </mat-form-field>
+            </div>
+          </div>
+          <div>
+            <button mat-raised-button color="primary" class="back" matStepperPrevious>חזרה</button>
+            <button mat-raised-button color="primary" matStepperNext>המשך</button>
+          </div>
+          <div class="line"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        </form>
+      </mat-step>
+      <mat-step [stepControl]="exampleFormGroup" label="מסמכים נוספים">
+        <form [formGroup]="exampleFormGroup">
+          <div>
+            <h2>מסמכים נוספים</h2>
+            <h3>מלאו במדיוק את פרטי הנכס שעבורו מבוקשת הנחה</h3>
+          </div>
+          <div class="row fields">
+            <div class="col-md-6 col-xs-12">
+              <label>שדה טקסט שני</label>
+              <mat-form-field appearance="outline">
+                <input matInput formControlName="example1Ctrl" required>
+              </mat-form-field>
+            </div>
+            <div class="col-md-6 col-xs-12">
+              <label>שדה טקסט ראשון</label>
+              <mat-form-field appearance="outline">
+                <input matInput formControlName="example2Ctrl" required>
+              </mat-form-field>
+            </div>
+          </div>
+          <div>
+            <button mat-raised-button color="primary" class="back" matStepperPrevious>חזרה</button>
+            <button mat-raised-button color="primary" matStepperNext>המשך</button>
+          </div>
+          <div class="line"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        </form>
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>הצהרת המבקש</ng-template>
+        <p>You are now done.</p>
+        <div>
+          <button mat-raised-button color="primary" class="back" matStepperPrevious>חזרה</button>
+          <button mat-raised-button color="primary" (click)="stepper.reset()">Reset</button>
+        </div>
+        <div class="line"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+      </mat-step>
+    </mat-horizontal-stepper>
+  </div>
+</div>

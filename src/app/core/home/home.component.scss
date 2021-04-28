@@ -1,0 +1,26 @@
+h1 {
+  text-align: center;
+  font-weight: bold;
+}
+a {
+  width: 300px;
+  display: block;
+  margin: 16px auto;
+  line-height: 2.6em;
+  font-size: 1.6em;
+
+  mat-icon:first-child {
+    float: right;
+    height: 100%;
+    line-height: inherit;
+  }
+  span {
+    margin-right: 5px;
+  }
+
+  mat-icon:last-child {
+    float: left;
+    height: 100%;
+    line-height: inherit;
+  }
+}

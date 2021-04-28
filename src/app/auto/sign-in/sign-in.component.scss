@@ -1,0 +1,22 @@
+mat-card {
+  max-width: 300px;
+  margin: 2em auto;
+  text-align: center;
+  padding: 1em 2em 3em 2em;
+}
+
+mat-form-field {
+  display: block;
+}
+
+button {
+    width: 100%;
+}
+
+.forgotPassword {
+    float: left;
+}
+
+.redirectToLogin {
+    float: right;
+}

@@ -1,0 +1,22 @@
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+h1 {
+  text-align: center;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .cdk-column-email,
+  .cdk-column-phone,
+  .cdk-column-website {
+    display: none;
+  }
+}
